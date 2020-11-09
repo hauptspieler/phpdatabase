@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+
+/* What is a Clearfix?
+The clearfix, for those unaware, is a CSS hack that solves a persistent bug that occurs when two floated elements are stacked next to each other. When elements are aligned this way, the parent container ends up with a height of 0, and it can easily wreak havoc on a layout. */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.btn{
+    padding: .5rem 1rem;
+    background: #632224;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.btn.back{ 
+    padding: .5rem 1rem;
+    background: #632224;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    float: right;
+}
+
+.btn:hover{
+    color: white !important;
+    background: #ad3c40;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #f6f6f6;
+    font-family: 'Montserrat';
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat';
+    color: #444;
+    margin: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-input{
+    font-size: 1.2rem;
+}
+
+/* NAVBAR  */
+header{
+    background-color: #632224;
+    height: 66px;
+}
+header *{
+    color: white;
+}
+
+header .logo{
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+}
+
+header .logo-text{
+    margin: 8px;
+}
+
+header ul{
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+header ul li{
+    float: left;
+}
+
+header ul li a {
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+header ul li a:hover{
+    background: #ad3c40;
+    transition: 0.5s;
+}
+
+header .date{
+    float: right;
+    font-size: 0.7em;
+    padding: 20px;
+}
+
+/* content */
+
+.content{
+    width: 90%;
+    margin: 30px auto 30px;
+}
+
+
+.content .main-content{
+    width: 70%;
+    float: left;
+}
+
+.content .main-content.single{
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+.content .main-content .post-title{
+    text-align: center;
+    margin-bottom: 40px ;
+}
+
+
+.content .main-content .post{
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+}
+
+.content .main-content .post .post-image{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+.content .main-content.single .single-image{
+    width: 50%;
+    height: 90%;
+    float: left;
+}
+.content .section.publicity .publicity-image{
+    width: 30%;
+    height: 100%;
+    float: right;
+}
+
+.content .main-content .post .read-more{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.content .main-content .post .post-preview{
+    width: 60%;
+    float: right;
+}
+
+.content .main-content .recent-post-tile{
+    margin: 20px;
+}
+
+.content .sidebar{
+    width: 70%;
+    float: left;
+    height: 300px;
+}
+
+.content .sidebar .section{
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+} 
+
+/* .content .sidebar .section.search{
+    margin-top: 80px;
+}
+
+
+
+
+
