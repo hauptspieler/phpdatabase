@@ -31,7 +31,7 @@ The clearfix, for those unaware, is a CSS hack that solves a persistent bug that
                     <i class="calendar"> Mar, 11, 2019</i>
                     <p class="preview-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad laudantium repellendus nesciunt aliquam saepe sint voluptatibus excepturi nobis rerum aliquid vel repellat reiciendis, voluptate obcaecati et ipsum at provident neque.
-                        ique velit in voluptates. Perspiciatis vero nostrum aperiam esse temporibus.
+                        ique velit in voluptatesfsfsffss. Perspiciatis vero nostrum aperiam esse temporibus.
 
                         ostrum aperiam esse temporibus.
                     </p>    
@@ -110,3 +110,4 @@ The clearfix, for those unaware, is a CSS hack that solves a persistent bug that
 </body>
 </html>
 
+<!-- test  -->
