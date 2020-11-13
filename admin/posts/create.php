@@ -1,11 +1,4 @@
-
-<!-- youtube.com/watch?v=fC4hQH4GvbU&list=PL3pyLl-dgiqD0eKYJ-XSxrHaRh-zsA2tP&index=22
-
-Comprar o codigo fonte do vídeo 2 para poder dar continuidade
-
--->
-
-
+<?php include("../../app/controllers/posts.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +38,7 @@ Comprar o codigo fonte do vídeo 2 para poder dar continuidade
 
                 <h2 class="page-title">Add Posts</h2>
 
-                <form action="create.html" method="post">
+                <form action="create.php" method="post">
                     <div>
                         <label>Title</label>
                         <input type="text" name="title" class="text-input">
@@ -73,7 +66,7 @@ Comprar o codigo fonte do vídeo 2 para poder dar continuidade
 
                     <div>
                        
-                        <buttton type="submit" class="btn btn-big">Add Post</buttton>
+                        <buttton type="submit" name="add-post" class="btn btn-big">Add Post</buttton>
                     </div>
                 </form>
                  
