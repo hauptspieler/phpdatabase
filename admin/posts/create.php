@@ -56,18 +56,31 @@
 
                     <div>
                        
-                        <label >Categoria</label>
+                        <label>Categoria</label>
                         <select name="topic" class="text-input">
-                            <option value="Categoria 1">Categoria 1</option>
-                            <option value="Categoria 2">Categoria 2</option>
+                            <option value="categoria 1">categoria 1 </option>
+                           
+                            <?php foreach($topics as $key => $topic): ?>
+                             <option value="<?php echo $topic['name']?>"><?php echo $topic['name']?></option>
+                            <?php endforeach; ?>
+
+
+
+                            <?php foreach ($topics as $key => $topic): ?>
+                                    <?php if (!empty($topic_id) && $topic_id == $topic['id'] ): ?>
+                                        <option selected value="<?php echo $topic['id'] ?>"><?php echo $topic['name'] ?></option>
+                                    <?php else: ?>
+                                        <option value="<?php echo $topic['id'] ?>"><?php echo $topic['name'] ?></option>
+                                    <?php endif; ?>
+
+                                <?php endforeach; ?>
                             
                         </select>
                     </div>
 
                     <div>
                        
-                        <buttton type="submit" name="add-post" class="btn btn-big">Add Post</buttton>
-                    </div>
+                    <button type="submit" name="add-post" class="btn btn-big">Add Post</button>	                    </div>
                 </form>
                  
 
