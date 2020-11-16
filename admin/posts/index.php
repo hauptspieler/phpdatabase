@@ -1,3 +1,5 @@
+<?php include("../../app/controllers/posts.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,38 +31,43 @@
            
            <div class="button-group">
                <a href="create.php" class= "btn btn-big">Add Post</a>
-               <a href="index.php" class= "btn btn-big">Manage Posts</a>
+               <a href="index.php" class= "btn btn-big">Gerenciamento de posts</a>
            </div>
 
            <div class="content">
 
-               <h2 class="page-title">Manage Posts</h2>
+               <h2 class="page-title">Gerenciamento de postos</h2>
+
+               <?php include("../../app/includes/messages.php") ?>
 
                <table>
                   
                    <thead>
                        <th>Codigo</th>
                        <th>Titulo</th>
-                       <th>Autor</th>
+                       
                        <th colspan="3">Ação</th>
                    </thead>
                    <tbody>
-                       <tr>
-                           <td>1</td>
-                           <td>This is the first post</td>
-                           <td>Raphael</td>
-                           <td><a href="#" class="edit">editar</a></td>
-                           <td><a href="#" class="delete">deletar</a></td>
-                           <td><a href="#" class="publish">publlicar</a></td>
-                       </tr>
-                       <tr>
-                           <td>2</td>
-                           <td>This is the second post</td>
-                           <td>Baisch</td>
-                           <td><a href="#" class="edit">editar</a></td>
-                           <td><a href="#" class="delete">deletar</a></td>
-                           <td><a href="#" class="publish">publicar</a></td>
-                       </tr>
+                       <?php foreach ($posts as $key => $post): ?>
+
+                         <tr>
+                            <td><?php echo $key + 5; ?></td>
+                            <td><?php echo $post['title'] ?></td>
+                           <td><a href="edit.php?=id=<?php echo $post['id'];?>" class="edit">editar</a></td>
+                           <td><a href="edit.php?=delete_id=<?php echo $post['id'];?>" class="delete">deletar</a></td>
+                           
+                           <?php if ($post['published']): ?>
+                           <td><a href="#" class="unpublish">Despublicar</a></td>
+                           <?php else: ?>
+                           <td><a href="#" class="publish">Publicado</a></td>
+                           <?php endif; ?>
+
+                        </tr>
+
+                       <?php endforeach; ?>
+                     
+                     
                    </tbody>
                </table>
 
